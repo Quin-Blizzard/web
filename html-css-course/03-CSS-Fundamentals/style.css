@@ -1,0 +1,323 @@
+* {
+  /* border-top: 10px solid #1098ad; */
+  margin: 0;
+  padding: 0;
+}
+/*  全局设置 适用于所有元素的属性，但是不涉及继承  比通用选择器优先级高*/
+
+body {
+  /* color: red; */
+  font-family: sans-serif; /*字体样式*/
+  color: #444;
+
+  border-top: 10px solid #1098ad;
+  /* margin: 0; 没有继承属性 */
+
+  position: relative;
+  /* 父元素 相对位置 -->从中放置绝对定位的元素 */
+}
+/* body是父元素，其中的子元素会继承red，但是会被子元素中的规则覆盖 */
+/* 但不是所有元素都会继承父元素，文本属性会得到继承，而边框属性不会被继承到子元素中去。 */
+
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif; 字体样式
+  color: #444;
+} */
+
+.container {
+  width: 800px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  /* 速记 上和下 左和右 */
+}
+/* 整个网页居中 */
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+  /* 居中不论在内联或内联块元素中 都要放在父元素上 */
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7; /* 背景属性 */
+  /* border: 5px solid #1098ad; 四周边界属性 dashed 是虚线 */
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* border-left: 5px solid #1098ad;
+  border-right: 5px solid #1098ad; */
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  width: 500px;
+}
+
+/*整个网页背景 
+body {
+  background-color: rgb(242, 206, 138);
+} */
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px; /*像素大小*/
+
+  text-transform: uppercase; /*变成大写*/
+  font-style: italic; /*变成斜体*/
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center; /*文字对齐方式：居中对齐*/
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5; /*默认行高是1，字体原来大小的1.5倍*/
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* display: inline; */
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/*
+article header p {
+  font-style: italic;
+}*/
+#author {
+  font-size: 18px;
+  font-style: italic;
+} /*用id代替 id不能重复 只能用在一个地方*/
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  /* 多个地方用class */
+  font-size: 18px;
+  font-weight: bold; /*文本加粗 */
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.related {
+  list-style: none;
+}
+/* 这三个效果相同  尽量避免使用id 后续更改麻烦 一次类名也用class*/
+
+/* 
+.first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+/* 伪类 */
+
+li:last-child {
+  font-style: italic;
+}
+
+/* li:nth-child(2) {
+  color: red;
+}
+/* 选择第几个 */
+
+/*li:nth-child(even) {
+  color: red;
+} */
+/*odd是奇数 even是偶数*/
+
+/* 不起作用 */
+/* article p:first-child {
+  color: red;
+} */
+/* 此时article的first-chile是header，所以选择器在这里不起作用 */
+
+/* 超链接样式 */
+
+/* 链接伪类 */
+/* 不具有href元素的a */
+/* a {
+  color: red;
+} */
+
+/* 具有href元素的 作为目标 */
+a:link {
+  color: #1098ad;
+  text-decoration: none; /* 去除链接下面的下划线 */
+}
+/*访问没浏览过的链接的颜色 访问过后默认到上面那个红色*/
+
+/* a:visited {
+  color: #1098ad;
+} */
+/* 访问浏览过的链接颜色 */
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+/*鼠标放在链接上的链接颜色 mouse over link */
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+/*选中链接的颜色 */
+
+/* L V H A */
+
+/* resolving conflicts */
+/* #copyright {
+  color: red;
+} */
+/* 优先级最高 */
+
+/* .copyright {
+  color: blue;
+} */
+/* 第二优先级 */
+
+/* .text {
+  color: yellow;
+} */
+/* .copyright 和 .text 是相同优先级 那么位于后面的生效 */
+
+/* footer p {
+  color: green;
+}*/
+/* 元素选择器 最低 */
+/* 在分号前加上 !important 关键字选择 优先级比ID高*/
+
+.post-img {
+  width: 100%;
+  /* 父容器（header）宽度的百分之几 */
+  height: auto;
+  /* 如果在html中设置过高度，那在css中要吧高度设置成自动 */
+}
+
+nav a:link {
+  /* background-color: orange; */
+  /* margin: 20px; */
+  /* 不创造垂直空间 只有左右间距盖面 padding一样 */
+  /* 因为 a 是一个内联元素 其中盒子模型不创造垂直空间 */
+  /* padding: 20px; */
+  /* 虽然颜色填充了 但是文本上下其实不变 */
+
+  /* display: block; */
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+  /* text-align: center; */
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  /* 游标属性 */
+
+  position: absolute;
+  /* 绝对位置 */
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/* 伪元素 有两个冒号 */
+
+/* h3 + p::first-line {
+  color: red;
+} */
+/* 加号是相邻兄弟选择器，同一个元素下相邻的元素- */
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  /* 负距离 */
+}
+/* after是位于最后一个子元素 before是第一个子元素
+但最后位置都一样 用为有绝对定位 */

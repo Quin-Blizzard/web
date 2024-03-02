@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--语言-->
+  <hea>
+    <meta charset="UTF-8" />
+    <!--字符集-->
+
+    <title>The basic language of the web: HTML</title>
+  </hea>
+
+  <body>
+    <!--
+    <h1>The basic language of the web: HTML</h1>
+    <h2>The basic language of the web: HTML</h2>
+    <h3>The basic language of the web: HTML</h3>
+    <h4>The basic language of the web: HTML</h4>
+    <h5>The basic language of the web: HTML</h5>
+    <h6>The basic language of the web: HTML</h6>
+    -->
+
+    <header>
+      <!--标题 web顶部显示的-->
+      <h1>📘 The Code Magazine</h1>
+
+      <nav>
+        <!--用<div></div>也可以 都是只创建一个盒子 在视觉上没有效果-->
+        <!--导航 相当容器  把超链接这些元素放在一起-->
+        <a href="blog.html">Blog</a>
+        <a href="#">Challenges</a>
+        <a href="#">Flexbox</a>
+        <a href="#">Css Grid</a>
+        <!-- #（放网址的（UAL)) 不指向任何地方 效果是回到顶部-->
+      </nav>
+
+      <h2>The Basic Language of the Web: HTML</h2>
+
+      <img
+        src="img/laura-jones.jpg"
+        alt="Headshot of laura-jones"
+        width="50"
+        height="50"
+      />
+      <!--alt 是图片的解释 让浏览器知道图片的意思 可用于盲人浏览视图 不会显示在web的页面-->
+
+      <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+
+      <img
+        src="img/post-img.jpg"
+        alt="HTML code on a screen"
+        width="500"
+        height="200"
+      />
+    </header>
+
+    <article>
+      <!--另一个容器-->
+      <p>
+        All modern websites and web applications are built using three
+        <em>fundamental</em>
+        technologies: HTML, CSS and JavaScript. These are the languages of the
+        web.
+      </p>
+
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
+
+      <h3>What is HTML?</h3>
+      <p>
+        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+        language that web developers use to structure and describe the content
+        of a webpage (not a programming language).
+      </p>
+      <p>
+        HTML consists of elements that describe different types of content:
+        paragraphs, links, headings, images, video, etc. Web browsers understand
+        HTML and render HTML code as websites.
+      </p>
+      <p>In HTML, each element is made up of 3 parts:</p>
+
+      <ol>
+        <li>The opening tag</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+
+      <!--超链接 target ="_blank" 是点击链接后打开一个新的网页 不使用target则加载在原来的网页-->
+      <p>
+        You can learn more at
+        <a
+          href="https://developer.mozilla.org/zh-CN/docs/Web/HTML"
+          target="_blank"
+          >MDN Web Docs</a
+        >.
+      </p>
+
+      <h3>Why should you learn HMLT?</h3>
+
+      <p>
+        There are countless reasons for learning the fundamental language of the
+        web. Here are 5 of them:
+      </p>
+
+      <ul>
+        <li>To be able to use the fundamental web dev language</li>
+        <li>
+          To hand-craft beautiful websites instead of relying on tools like
+          Worpress or Wix
+        </li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun</li>
+        😃
+      </ul>
+      <p>Hopefully you learned something new here. See you next time!</p>
+    </article>
+
+    <aside>
+      <!--文章的次要部分 在article 之后-->
+
+      <p>
+        <strong>Related posts</strong>
+      </p>
+
+      <ul>
+        <li>
+          <img
+            src="img/related-1.jpg"
+            alt="related post"
+            width="75"
+            heigth="75"
+          />
+          <a href="#">How to learn Web Development</a>
+        </li>
+        <p>By Jonas Schmedtmann</p>
+
+        <li>
+          <img
+            src="img/related-2.jpg"
+            alt="related podt"
+            width="75"
+            height="75"
+          />
+          <a href="#">The Unknow Powers of CSS</a>
+        </li>
+        <p>By Jim Dillon</p>
+
+        <li>
+          <img
+            src="img/related-3.jpg"
+            alt="related podt"
+            width="75"
+            height="75"
+          />
+          <a href="#">Why JavaScript is Awesome</a>
+        </li>
+        <p>By Matilda</p>
+      </ul>
+    </aside>
+
+    <footer>Copying &copy; 2027 by The Code Magazine</footer>
+    <!--页脚 &copy是版权符号-->
+  </body>
+</html>
